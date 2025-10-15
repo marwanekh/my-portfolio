@@ -4,7 +4,7 @@ import * as THREE from 'three';
 
 
 export default function Portfolio() {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark);
@@ -65,18 +65,28 @@ export default function Portfolio() {
 
   const experiences = [
     {
+      company: "Amastrive",
+      role: "AI Project Contributor",
+      period: "Jul 2025 – Present",
+      description: "Built an AI-powered assistant using LangChain and Retrieval-Augmented Generation (RAG) to automate product queries.",
+      achievements: ["Designed a context-aware chatbot using Hugging Face and LLM APIs.", "Developed a dashboard for insights and performance tracking.", "Deployed via FastAPI and Docker for scalable use across brands."]
+    },
+    {
       company: "University of Limerick, Ireland",
       role: "AI Research Intern",
       period: "Jan 2025 – Jun 2025",
       description: "Evaluated state-of-the-art multimodal LLMs (BLIP-2, MiniGPT-4, LLaVA, Flamingo) on Visual Question Answering, benchmarking on 100k+ GQA samples.",
-      achievements: ["Designed an evaluation pipeline with accuracy, consistency, and mean-per-type metrics, enabling systematic comparison of 4+ models.", "Conducted qualitative error analysis that identified recurring failure patterns, informing future dataset augmentation strategies."]
+      achievements: [
+      "Built an evaluation pipeline with metrics for accuracy, consistency, and type-based comparison.",
+      "Analyzed model errors to identify recurring patterns and guide future dataset improvements."
+      ]
     },
     {
       company: "OCP S.A, Morocco",
       role: "AI & Data Science Intern",
       period: "Jun 2024 – Aug 2024",
       description: "Built ML/DL forecasting models for phosphate price prediction, achieving a 15% reduction in error rate compared to baseline statistical methods.",
-      achievements: ["Performed exploratory analysis on 10+ years of market data, uncovering key demand–supply drivers.", "Automated data preprocessing and model evaluation pipeline, reducing experimentation time by 30%."]
+      achievements: ["Performed exploratory analysis on 10+ years of market data, uncovering key demand–supply drivers.", "Automated data preprocessing and model evaluation pipeline."]
     },
     {
       company: "Techbible-UK",
@@ -133,7 +143,7 @@ export default function Portfolio() {
             <div className={`w-32 h-32 rounded-full mx-auto bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 p-1 transform transition-transform duration-500 hover:scale-110 hover:rotate-6`}>
               <div className={`w-full h-full rounded-full flex items-center justify-center overflow-hidden ${isDark ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'}`}>
                 <img 
-                  src="./portfolio_profile.jpg" 
+                  src="./profile/portfolio_profile.jpg" 
                   alt="Profile" 
                   className="w-full h-full object-cover rounded-full"
                   onError={(e) => {
