@@ -102,7 +102,8 @@ export default function Portfolio() {
     { name: "FastAPI", color: "#009688", icon: "./tools_icon/FastAPI.png" },
     { name: "TensorFlow", color: "#FF6F00", icon: "./tools_icon/TensorFlow.png" },
     { name: "Pandas", color: "#150458", icon: "./tools_icon/Pandas.png" },
-    { name: "SQL", color: "#4479A1", icon: "./tools_icon/MySQL.png" }
+    { name: "SQL", color: "#4479A1", icon: "./tools_icon/MySQL.png" },
+    { name: "LLM", color: "#FF9D00", icon: "./tools_icon/hf-logo.png" }
   ];
 
   return (
