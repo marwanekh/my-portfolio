@@ -415,7 +415,7 @@ export default function Portfolio() {
                         src={tool.icon} 
                         alt={tool.name}
                         className={`w-full h-full object-contain ${
-                          tool.name === "Python" ? "" : "filter brightness-0 invert"
+                          tool.name === "Python" || tool.name === "LLM" ? "" : "filter brightness-0 invert"
                         }`}
                       />
                     ) : (
